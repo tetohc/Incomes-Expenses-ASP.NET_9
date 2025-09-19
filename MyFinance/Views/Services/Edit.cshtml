@@ -1,0 +1,66 @@
+﻿@model MyFinance.Models.ViewModels.ServiceVM
+
+@{
+    ViewData["Title"] = "Actualizar";
+}
+<div id="subheader-container"></div>
+
+<div class="container mt-4">
+    <div class="card shadow-sm border-0">
+        <div class="card-header card-header-custom">
+            <h3 class="card-title card-title-custom">🛠️ Actualizar servicio</h3>
+        </div>
+
+        @using (Html.BeginForm("Edit", "Services", FormMethod.Post, new { @class = "form-horizontal", id = "formEditService" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.UserId)
+
+            <div asp-validation-summary="ModelOnly" class="text-danger px-4 pt-3"></div>
+
+            <div class="card-body px-4">
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label form-label-custom"></label>
+                    <input asp-for="Name" class="form-control form-control-custom" placeholder="Nombre del servicio" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Type" class="form-label form-label-custom"></label>
+                    <select asp-for="Type" asp-items="ViewBag.Type" class="form-select form-control-custom">
+                        <option value="" selected disabled>Seleccione un tipo</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="card-footer bg-light px-4 py-3">
+                <div class="row">
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <button type="submit" id="btn-update" class="btn btn-primary w-100">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                            <span class="btn-text">
+                                <i class="bi bi-save me-2"></i> Guardar cambios
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            <i class="bi bi-x-circle me-2"></i> Cancelar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/Services/Edit.js"></script>
+    <script src="~/js/Shared/UiComponents.js"></script>
+}

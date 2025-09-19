@@ -1,0 +1,74 @@
+﻿@using MyFinance.Helpers
+@using MyFinance.Models.Enums
+@model List<MyFinance.Models.ViewModels.TransactionVM>
+
+@{
+    ViewData["Title"] = "Transacciones";
+}
+
+<div id="subheader-container"></div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">💳 Transacciones registradas</h5>
+            </div>
+            <div class="card-body">
+                <form class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <label for="startDate" class="form-label">Desde</label>
+                        <input type="date" class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="endDate" class="form-label">Hasta</label>
+                        <input type="date" class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-outline-primary w-100" id="filterButton">
+                            <i class="bi bi-funnel"></i> Filtrar
+                        </button>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-outline-primary w-100" id="resetButton">
+                            <i class="bi bi-arrow-clockwise"></i> Reestablecer
+                        </button>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <div class="dropdown w-100">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="dropdownMenuExport" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-download"></i> Exportar
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="dropdownMenuExport">
+                                <li><a class="dropdown-item" href="#" id="export_excel"><i class="bi bi-file-earmark-excel me-2"></i> Excel</a></li>
+                                <li><a class="dropdown-item" href="#" id="export_pdf"><i class="bi bi-filetype-pdf me-2"></i> PDF</a></li>
+                                <li><a class="dropdown-item" href="#" id="export_csv"><i class="bi bi-filetype-csv me-2"></i> CSV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 table-bordered-custom" id="transactionsTable">
+                        <thead class="table-header-custom">
+                            <tr>
+                                <th>📂 Tipo de servicio</th>
+                                <th>📝 Descripción</th>
+                                <th>💰 Monto</th>
+                                <th>📅 Fecha</th>
+                                <th>⚙️ Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/Transactions/Index.js"></script>
+    <script src="~/js/Shared/UiComponents.js"></script>
+}

@@ -1,0 +1,37 @@
+﻿@using MyFinance.Helpers
+@using MyFinance.Models.Enums
+@model List<MyFinance.Models.ViewModels.ServiceVM>
+
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+<div id="subheader-container"></div>
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">📋 Lista de Servicios</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 table-bordered-custom" id="servicesTable">
+                        <thead class="table-header-custom">
+                            <tr>
+                                <th>📝 Nombre de servicio</th>
+                                <th>📂 Tipo de servicio</th>
+                                <th>⚙️ Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Services/Index.js"></script>
+    <script src="~/js/Shared/UiComponents.js"></script>
+}

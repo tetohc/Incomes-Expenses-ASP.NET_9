@@ -1,0 +1,185 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.bg-primary {
+    background-color: #3C45C1 !important;
+}
+
+.btn-primary {
+    background-color: #3C45C1 !important;
+}
+
+.text-primary {
+    color: #3C45C1 !important;
+}
+
+/* Encabezado de tabla */
+.table-header-custom {
+    background-color: #E8E9FC;
+    color: #3C45C1;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Filas alternas */
+.table-row-even {
+    background-color: #F8F9FF;
+}
+
+/* Hover en filas */
+.table-row-hover:hover {
+    background-color: #DDE0F7;
+}
+
+/* Bordes suaves */
+.table-bordered-custom td,
+.table-bordered-custom th {
+    border-color: #CED4DA;
+}
+
+/* Íconos de acción */
+.action-icon {
+    font-size: 1rem;
+    color: #3C45C1;
+}
+
+/* Botón de acciones */
+.btn-action {
+    background-color: transparent;
+    border: none;
+    color: #3C45C1;
+}
+
+    .btn-action:hover {
+        color: #2a34a0;
+    }
+
+/* Dropdown personalizado */
+.dropdown-menu-custom {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.card-header-custom {
+    background-color: #3C45C1;
+    color: white;
+    border-bottom: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title-custom {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.form-label-custom {
+    font-weight: 600;
+    color: #3C45C1;
+}
+
+.form-control-custom {
+    border-radius: 0.5rem;
+    border: 1px solid #CED4DA;
+}
+
+.btn-primary-custom {
+    background-color: #3C45C1;
+    color: white;
+    border: none;
+}
+
+    .btn-primary-custom:hover {
+        background-color: #2a34a0;
+        color: white;
+    }
+
+.btn-secondary-custom {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+    .btn-secondary-custom:hover {
+        background-color: #5a6268;
+        color: white;
+    }
+
+/* Encabezado principal */
+.dashboard-title {
+    color: #3C45C1;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+/* Tarjetas de métricas */
+.card-metric {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.bg-ingresos {
+    background: linear-gradient(135deg, #20c997, #17a2b8);
+}
+
+.bg-gastos {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+}
+
+.bg-ganancia {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: black;
+}
+
+/* Badges de categoría */
+.category-badge {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    padding: 0.4em 0.6em;
+}
+
+/* Lista de ingresos */
+.list-group-item-custom {
+    border: none;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+}
+
+/* Títulos de sección */
+.section-title {
+    color: #3C45C1;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
